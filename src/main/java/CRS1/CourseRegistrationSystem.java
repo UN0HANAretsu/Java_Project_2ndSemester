@@ -304,6 +304,20 @@ public class CourseRegistrationSystem {
     panel.add(new JLabel("Year: " + currentStudent.year));
 
     panel.add(new JLabel("---------------------------"));
+    
+    
+    double totalCredits = 0;
+
+for (String code : currentStudent.registeredCourses) {
+
+    Course c = getCourse(code);
+
+    if (c != null) {
+        totalCredits += c.credit;
+    }
+}
+
+panel.add(new JLabel("Total Credits: " + totalCredits));
 
     panel.add(new JLabel("Registered Courses (" 
             + currentStudent.registeredCourses.size() + "/" + MAX_COURSES + "):")); //course count
