@@ -1,0 +1,4 @@
+null,null,null,null,null,null
+1032,Sayra Rahman,2A,Spring,2026,ssss,CSE105,CHEM101,CSE106,CSE107
+1027,Nafisaaaa,A,Spring,2026,nnnn,CSE105,CSE106,CSE107
+1111,Maliha,1,1,2026,mama
