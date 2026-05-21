@@ -1,0 +1,12 @@
+package CRS;
+
+public class InvalidSemesterException extends Exception {
+
+    public InvalidSemesterException() {
+        super("Semester cannot be greater than 12.");
+    }
+
+    public InvalidSemesterException(String message) {
+        super(message);
+    }
+}
