@@ -192,6 +192,30 @@ public class CourseRegistrationSystem {
                 String id = idField.getText().trim();
                 String sec = secField.getText().trim();
                 String sem = semField.getText().trim();
+                      try {
+
+    int semester = Integer.parseInt(sem);
+
+    if (semester > 12 || semester < 1) {
+        throw new InvalidSemesterException(
+                "Semester must be between 1 and 12."
+        );
+    }
+
+} catch (NumberFormatException e) {
+
+    JOptionPane.showMessageDialog(this,
+            "Semester must be a number.");
+    return;
+
+} catch (InvalidSemesterException e) {
+
+    JOptionPane.showMessageDialog(this,
+            e.getMessage());
+    return;
+}
+
+                
                 String yr = yrField.getText().trim();
                 String pw = new String(pwField.getPassword()).trim();
 
